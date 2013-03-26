@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Unicorn Media, Inc. HTML5 Video Player</title>
+
+  <!-- Include the Unicorn Stylesheet -->
+  <link rel="stylesheet" href="css/um-base-player-skin.css" type="text/css">
+  
+  <!-- JS includes -->
+  <!--script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script-->
+  <script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery-ui-1.8.2.custom.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.um-video-player.js" type="text/javascript" charset="utf-8"></script>
+  
+  <!-- Inline JS -->
+  <script type="text/javascript">
+    //DOM ready function
+
+    $(document).ready(function() {
+         $('#video').umVideo(
+          {
+            childtheme:'umhover',
+            src:'http://once.unicornmedia.com/now/od/auto/2bc2bf67-d196-43a8-aeea-147bf705317b/206d3038-6036-4a46-9e2e-b2cf4f3936e9/38962074-06ac-4e0d-920b-2b131df7d741/content.once',
+            autoplay: true
+          });
+    });
+  </script>
+</head>
+<body>
+  
+  <video controls="controls" id="video">
+    
+  </video>
+ 
+
+
+</body>
+</html>

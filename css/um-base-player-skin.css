@@ -1,0 +1,401 @@
+/*
+ * umVideoPlayer - CSS base styles
+ *
+ * Copyright (c) 2011 Unicorn Media, Inc.
+ *
+ * www.unicornmedia.com
+ *
+ */
+body
+{
+	margin: 0 auto;
+	padding:0;
+	text-align:center;
+}
+/* base styles */
+.um-video-player
+{	
+	
+}
+.um-video-play, .um-volume-button {
+	cursor: pointer;
+}
+.um-video-timer {
+	cursor: default;
+}
+
+
+/* Start of umchrome default theme */
+.um-video-player.umchrome {
+	float: left;
+	position: relative;
+	padding: 2px;
+	border: 2px solid #000;
+
+	font-family: Arial, Helvetica, sans-serif;
+	background: #1a1a1a;
+	box-shadow: inset 0 15px 35px #333;
+}
+
+.um-video-player.umchrome .um-video-controls {
+	position: relative;
+	float: left;
+	clear: both;
+	width: 100%;
+}
+
+.um-video-player.umchrome .um-video-play, .um-video-player.umchrome .um-video-seek, .um-video-player.umchrome .um-video-duration, .um-video-player.umchrome .um-volume-box, .um-video-player.umchrome .um-video-fullscreen, .um-video-timer {
+	float: left;
+}
+
+/* play, pause */
+.um-video-player.umchrome .um-video-play {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	background: url(../images/btn_normal_play.png) no-repeat;	
+	
+	-moz-transition: all 0.2s ease-in-out; /* Firefox */
+	-webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */
+	-o-transition: all 0.2s ease-in-out;  /* Opera */
+	transition: all 0.2s ease-in-out; 
+}
+
+.um-video-player.umchrome  .um-video-play:hover
+{
+	opacity:1;
+	background: url(../images/btn_over_play.png) no-repeat;
+}
+
+.um-video-player.umchrome .um-paused-button {
+	background: url(../images/btn_normal_pause.png) no-repeat;
+}
+
+.um-video-player.umchrome .um-paused-button:hover {
+	background: url(../images/btn_over_pause.png) no-repeat;
+}
+
+
+.um-video-player.umchrome video {
+	float: left;
+}
+
+
+/* fullscreen */
+.um-video-player.umchrome .um-video-fullscreen
+{
+	
+	float:right;
+	cursor:pointer;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../images/btn_normal_fullScreen.png) no-repeat;	
+
+}
+
+/* exit fullscreen */
+.um-video-player.umchrome .um-video-exit-fullscreen
+{
+	float:right;
+	cursor:pointer;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../images/btn_normal_exitFullScreen.png) no-repeat;	
+
+}
+
+.um-video-player.umchrome .um-video-fullscreen:hover
+{
+	background: url(../images/btn_over_fullScreen.png) no-repeat;
+}
+
+.um-video-player.umchrome .um-video-exit-fullscreen:hover
+{
+	background: url(../images/btn_over_exitFullScreen.png) no-repeat;
+}
+
+/* seek */
+.um-video-player.umchrome .um-video-seek {
+	cursor:pointer;
+	position:relative;
+	height: 4px;
+	margin-top: 12px;
+	margin-right:10px;
+	border: 1px solid #000;
+	
+	background: #ccc;
+	background-image: -moz-linear-gradient(top, #535353, #333333);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #535353),color-stop(1, #333333));
+	
+	box-shadow: inset 0 -3px 3px #333333;
+}
+
+.um-video-player.umchrome .um-video-seek .ui-slider-handle {
+	cursor: pointer;
+	width: 8px;
+	height: 7px;
+	top: -2px;
+	background: url(../images/btn_normal_progress_handle.png) no-repeat;
+}
+
+.um-video-player.umchrome .um-video-seek .ui-slider-handle.ui-state-hover {
+	
+}
+
+.um-video-player.umchrome .um-video-seek .ui-slider-range {
+
+	
+	background: #089542;
+
+}
+
+
+/* timer */
+.um-video-player.umchrome .um-video-timer {
+	margin-top: 8px;
+	margin-right: 10px;
+	color: #fff;
+	font-size: 0.7em;
+	font-weight: bold;
+}
+
+/* duration */
+.um-video-player.umchrome .um-video-duration {
+	margin-top: 8px;
+	margin-left: 5px;
+	margin-right: 10px;
+	color: #fff;
+	font-size: 0.7em;
+	font-weight: bold;
+}
+
+/* volume */
+.um-video-player.umchrome .um-volume-box {
+	
+	position: absolute;
+	margin-right:30px;
+	bottom: 0px;
+	right: 0px;
+	overflow: hidden;
+	width: 30px;
+	height: 30px;
+	color: #fff;
+	
+	
+
+}
+
+.um-video-player.umchrome .um-volume-box:hover {	
+	height: 135px;
+	padding-top: 5px;
+	background-color:#333;
+	
+}
+
+
+.um-video-player.umchrome .um-volume-box:hover .um-volume-slider {
+	position: relative;
+	visibility: visible;
+	opacity: 1;
+}
+
+.um-video-player.umchrome .um-volume-slider {	
+	position: relative;
+	height: 100px;
+	width: 3px;
+	left: 13px;
+	
+	visiblity: hidden;
+	opacity: 0;
+	
+	border: 1px solid #000;
+
+	background: #ccc;
+	background-image: -moz-linear-gradient(top, #535353, #333333);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #535353),color-stop(1, #333333));
+	
+	
+	box-shadow: inset 0 3px 3px #333333;
+}
+
+.um-video-player.umchrome .um-volume-slider .ui-slider-handle {
+	cursor: pointer;	
+	width: 7px;
+	height: 8px;
+	left: -2px;
+	margin-bottom:-0.3em;
+	margin-left:0;
+	background: url(../images/btn_normal_volume_handle.png) no-repeat;
+}
+
+.um-video-player.umchrome .um-volume-slider .ui-slider-handle.ui-state-hover {
+	
+}
+
+.um-video-player.umchrome .um-volume-slider .ui-slider-range {
+	background: #089542;
+	box-shadow: inset 0 3px 3px #d5d5d5;
+}
+
+/* volume button */
+
+/* Mute */
+.um-video-player.umchrome .um-volume-button {
+	position: absolute;
+	bottom: -2px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../images/btn_normal_mute.png) no-repeat;
+
+}
+
+.um-video-player.umchrome .um-volume-button:hover {
+	background: url(../images/btn_over_mute.png) no-repeat;
+}
+
+.um-video-player.umchrome .um-volume-mute {
+	background: url(../images/btn_normal_mute.png) no-repeat;
+}
+
+/* Unmute */
+.um-video-player.umchrome .um-volume-off-button {
+	cursor:pointer;
+	position: absolute;
+	bottom: -2px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../images/btn_normal_unMute.png) no-repeat;
+	text-indent: -9999px;
+	
+	opacity: 0.8;
+}
+
+.um-video-player.umchrome .um-volume-off-button:hover {
+	opacity: 1;
+	background: url(../images/btn_over_unMute.png) no-repeat;
+}
+
+.um-video-player.umchrome .um-volume-off-button {
+	background: url(../images/btn_normal_unMute.png) no-repeat;
+}
+
+/* Start of umhover child theme overrides */
+
+.um-video-player.umhover {
+	padding: 0px;
+}
+
+.um-video-player.umhover video:hover + .um-video-controls {
+	width:100%;
+	visibility: visible;
+	opacity: 0.7;
+}
+
+.um-video-player.umhover .um-video-controls:hover {
+	width:100%;
+	visibility: visible;
+	opacity: 0.7;
+}
+
+.um-video-player.umhover .um-video-controls {
+	position: absolute;
+	bottom: 0;
+	border: 1px solid #2E2E2E;
+	
+	-moz-border-radius: 1px; /* FF1+ */
+	-webkit-border-radius: 1px; /* Saf3+, Chrome */
+	border-radius: 1px; /* Opera 10.5, IE 9 */
+	
+	background: #000000;
+	background-image: -moz-linear-gradient(top, #313131, #313131); /* FF3.6 */
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #313131),color-stop(1, #313131)); /* Saf4+, Chrome */
+	
+	opacity: 0;
+	visibility: hidden;
+	
+	box-shadow: inset 0 15px 35px #535353;
+	
+	-moz-transition: all 0.1s ease-in-out; /* Firefox */
+	-webkit-transition: all 0.1s ease-in-out; /* Safari and Chrome */
+	-o-transition: all 0.1s ease-in-out;  /* Opera */
+	transition: all 0.1s ease-in-out; 
+}
+
+/* play */
+.um-video-player.umhover  .um-video-play:hover
+{
+	margin-right:10px;
+}
+
+/* pause */
+.um-video-player.umhover .um-paused-button 
+{
+	margin-right:10px;
+}
+
+/* current time*/
+.um-video-player.umchrome .um-video-timer {
+	margin-right: 10px;
+}
+
+/* progress bar*/
+.um-video-player.umhover .um-video-seek {
+	
+}
+
+/* duration */
+.um-video-player.umchrome .um-video-duration {
+	margin-right: 10px;
+}
+
+/* volume slider*/
+.um-video-player.umhover .um-volume-slider {
+	height: 100px;
+}
+
+/* volume button */
+.um-video-player.umhover .um-volume-button {
+	margin-right:10px;
+}
+
+/* volume slider container */
+.um-video-player.umhover .um-volume-box {
+	
+}
+
+.um-video-player.umhover .um-volume-box:hover {	
+	height: 135px;	
+}
+
+
+
+.um-video-player.umhover .um-video-fullscreen{
+	margin-left:15px;
+}
+
+/* needed jquery ui styles
+ * using these, we don't depend on jQuery UI's stylsheet
+ */
+.ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	cursor: default;
+	outline: none;
+}
+
+.ui-slider-range {
+	display:block;
+	width:100%;	
+	height:100%;
+	left:0;
+	bottom: 0;
+	border:0 none;
+	position:absolute;
+	z-index:1;
+}
